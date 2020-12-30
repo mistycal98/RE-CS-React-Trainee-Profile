@@ -27,6 +27,9 @@ yarn.lock
 .eslintcache
 .vscode
 .idea
-
-.prettierc
 package-lock.json
+/backend/config.env
+
+# this ignores files uploads but not the upload folder as a whole 
+/backend/uploads/*
+.prettierrc
