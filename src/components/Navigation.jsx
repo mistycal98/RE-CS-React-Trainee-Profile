@@ -1,13 +1,13 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
 
-import logo from "./logo512.png";
+import logo from "../assets/logo512.png";
 class Navigation extends Component {
 	render() {
 		return (
 			<div className="navbar">
-				<img className="logo" src={logo} alt="logo" />
-				<ul className="links">
+				<img className="logo" src={logo} alt="logo" srcset="" />
+				<ul className = "links">
 					<li>
 						<Link to="/">Home </Link>
 					</li>
