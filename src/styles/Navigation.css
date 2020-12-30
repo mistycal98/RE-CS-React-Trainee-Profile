@@ -1,0 +1,28 @@
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  display: block;
+  justify-self: start;
+  top: 0;
+  width: 100%;
+}
+
+.mr-auto {
+  display: block;
+  border: 1px solid black;
+  float: right;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.heading {
+  float: left;
+}

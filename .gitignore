@@ -27,3 +27,6 @@ yarn.lock
 .eslintcache
 .vscode
 .idea
+
+.prettierc
+package-lock.json
