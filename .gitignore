@@ -27,3 +27,5 @@ yarn.lock
 .eslintcache
 .vscode
 .idea
+package-lock.json
+/backend/config.env
