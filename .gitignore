@@ -29,3 +29,6 @@ yarn.lock
 .idea
 package-lock.json
 /backend/config.env
+
+# this ignores files uploads but not the upload folder as a whole 
+/backend/uploads/*

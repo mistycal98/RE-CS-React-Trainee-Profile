@@ -1,3 +1,4 @@
+// Custom Error Constructor
 class AppError extends Error {
   constructor(statusCode, status, message) {
     super();
@@ -6,4 +7,5 @@ class AppError extends Error {
     this.message = message;
   }
 }
+
 module.exports = AppError;

@@ -1,9 +1,12 @@
+// package imports 
 const uniquid = require("uniquid");
 const mongoose = require("mongoose");
+
+// Defining Schema
 const employeeSchema = new mongoose.Schema({
   employeeId: {
     type: String,
-    default: uniquid() + Date.now(),
+    default: uniquid() + Date.now(), // yaha pe default mat karna instead while creating a new User waha do it uniquid!!
     unique: true,
   },
   firstName: {
@@ -57,5 +60,7 @@ const employeeSchema = new mongoose.Schema({
     // },
   },
 });
+
 const Employee = mongoose.model("Employee", employeeSchema);
+
 module.exports = Employee;

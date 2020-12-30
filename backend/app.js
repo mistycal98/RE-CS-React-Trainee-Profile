@@ -1,25 +1,38 @@
+// Import Packages
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+
+// Module Imports 
+const employeeRoute = require("./routes/employeeRoutes");
+
+// .env path
 dotenv.config({ path: "./config.env" });
-const router = require("./routes/employeeRoutes");
-const { config } = require("process");
+
+// Server Create
 const app = express();
+
+// Express Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/employee", router);
-app.listen(process.env.PORT, console.log(`app started on ${process.env.PORT}`));
-mongoose.connect(
-  process.env.DATABASE_URL,
-  {
-    useCreateIndex: true,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
-  (err, connection) => {
-    if (err) {
-      console.log(err);
-      return console.log("Error in connecting to database");
-    } else console.log("Connected to Database");
-  }
-);
+
+// Routes import
+app.use("/employee", employeeRoute);
+
+// DB Connection
+try {
+	mongoose.connect(
+		process.env.DATABASE_URL,
+		{
+			useCreateIndex: true,
+			useNewUrlParser: true,
+			useUnifiedTopology: true,
+		},
+		() => {
+			app.listen(process.env.PORT, console.log(` http://localhost:${process.env.PORT}`));
+			console.log("Connected to DB!");
+		}
+	);
+} catch (error) {
+	console.log(error);
+}
