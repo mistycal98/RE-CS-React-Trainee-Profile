@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
-// Module Imports 
+// Module Imports
 const employeeRoute = require("./routes/employeeRoutes");
 
 // .env path
@@ -29,7 +29,10 @@ try {
 			useUnifiedTopology: true,
 		},
 		() => {
-			app.listen(process.env.PORT, console.log(` http://localhost:${process.env.PORT}`));
+			app.listen(
+				process.env.PORT,
+				console.log(`http://localhost:${process.env.PORT}`)
+			);
 			console.log("Connected to DB!");
 		}
 	);
