@@ -54,7 +54,7 @@ const employeeSchema = new mongoose.Schema({
 	emailId: {
 		type: String,
 		required: [true, "Please enter Email"],
-		// unique: true,
+		unique: true,
 		validate: [
 			{
 				validator: function () {
