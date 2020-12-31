@@ -1,46 +1,48 @@
-.emp-container{
-    box-sizing: border-box;
-    display: flex;
+.emp-container {
+	box-sizing: border-box;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	min-height: 100vh;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
-.emp-detials h1{
-    	margin: 10px 0;
+.emp-detials h1 {
+	font-size: 1.5rem;
+	margin: 10px 0;
+	text-decoration: none;
 }
-.emp-detials h3{
-    	margin: 5px 0;
+.emp-detials h3 {
+	margin: 5px 0;
 	text-transform: uppercase;
 }
-.emp-card{
-    border-radius: 5px;
-	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
-	color: #B3B8CD;
-	padding-top: 30px;
+.emp-card {
+	border: 1px solid #b3b8cd;
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+	color: #b3b8cd;
+	margin: 1rem;
 	position: relative;
 	width: 350px;
 	max-width: 100%;
-    text-align: center;
+	text-align: center;
 }
 
-.emp-image{
-    border: 1px solid #03BFCB;
+.emp-image {
+	border: 1px solid #03bfcb;
 	border-radius: 10px;
-    padding: 0;
-    overflow: hidden;
-    height: 10rem;
-    width: 10rem;
-    
+	margin: 1rem auto;
+	overflow: hidden;
+	object-fit: cover;
+	height: 100px;
+	width: 100px;
 }
-.emp-image img{
-    border-radius: 10px;
-    width: auto;
-    height: auto;
 
+.emp-image img {
+	height: 100%;
+	width: 100%;
 }
