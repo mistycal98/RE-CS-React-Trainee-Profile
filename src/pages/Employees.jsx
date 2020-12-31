@@ -1,7 +1,8 @@
 // Package import
 import { Component } from "react";
 import { Link } from "react-router-dom";
-
+import "../styles/Emp.css"
+// import "../styles/Employees.css"
 // Api url import
 import { employeeUrl } from "../api/EmployeeApi";
 class Companies extends Component {
@@ -20,21 +21,29 @@ class Companies extends Component {
 	};
 	render() {
 		return (
-			<div>
-				{/* <select>
-					<option>Raw Engineering</option>
-					<option>Contentstack</option>
-					<option>Surfboard Ventures</option>
-				</select> */}
+			<div className="emp-container">
+				
 				{this.state.employees.map((employee) => (
 					<Link to={`/employees/${employee.id}`}>
-						<div>
-							<p>{employee.id}</p>
-							<h1>
-								{employee.firstName} {employee.lastName}
-							</h1>
-							<img src={employee.imageUrl} alt={employee.firstName} />
-							<h3>{employee.company}</h3>
+
+						<div className="emp-class">
+							<div className="emp-card">
+								<div className="emp-image">
+									<img src={employee.imageUrl} alt={employee.firstName} />	
+								</div>
+								<div className="emp-detials">
+									<h1>
+										{employee.firstName} {employee.lastName}
+									</h1>
+									<br/>
+									<h3>{employee.company}</h3>
+								</div>
+
+							</div>
+
+
+							{/* <p>{employee.id}</p> */}
+							
 						</div>
 					</Link>
 				))}

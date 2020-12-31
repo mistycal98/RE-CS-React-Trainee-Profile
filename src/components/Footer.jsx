@@ -4,8 +4,21 @@ import "../styles/Footer.css"
 class Footer extends Component{
     render() {
         return (
-            <div className="footer-class">
-                <p>Footer</p>
+            <div className="site-footer">
+                <div className="footer-conatiner">
+                    <div className="footer-row">
+                        <div className="col-md-8 col-sm-6 col-xs-12">
+                            <p className="footer-text">
+                                Copyright &copy; 2020 All Rights Reserved by<a href=" ">Company</a>.
+                            </p>
+                        </div>
+                        <ul className="footer-icons">
+                            <li><a class="facebook" href=" "><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" href=" "><i class="fa fa-twitter"></i></a></li>
+                             <li><a class="linkedin" href=" "><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         )
     }

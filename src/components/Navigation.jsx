@@ -18,9 +18,9 @@ class Navigation extends Component {
 					<li>
 						<Link to="/aboutus"> About Us </Link>
 					</li>
-					<li>
+					{/* <li>
 						<Link to="/login"> Login </Link>
-					</li>
+					</li> */}
 				</ul>
 			</div>
 		);
