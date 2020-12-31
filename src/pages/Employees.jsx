@@ -28,7 +28,7 @@ class Companies extends Component {
 				</select> */}
 				{this.state.employees.map((employee) => (
 					<Link to={`/employees/${employee.id}`}>
-						<div className="card">
+						<div>
 							<p>{employee.id}</p>
 							<h1>
 								{employee.firstName} {employee.lastName}
