@@ -1,5 +1,6 @@
 // package imports
 const mongoose = require("mongoose");
+// const emailExistHandler = require("../helper/emailExist.js");
 
 // Defining Schema
 const employeeSchema = new mongoose.Schema({
@@ -53,7 +54,7 @@ const employeeSchema = new mongoose.Schema({
 	emailId: {
 		type: String,
 		required: [true, "Please enter Email"],
-		unique: true,
+		// unique: true,
 		validate: [
 			{
 				validator: function () {
@@ -80,6 +81,14 @@ const employeeSchema = new mongoose.Schema({
 				},
 				message: "Email id is not valid",
 			},
+			// {
+			// 	validator: async function () {
+			// 		let emailExist = await emailExistHandler();
+			// 		console.log(emailExist);
+			// 		return emailExist;
+			// 	},
+			// 	message: "Email already exists",
+			// },
 		],
 	},
 	companyName: {

@@ -6,7 +6,13 @@ import logo3 from "../assets/surf.png";
 class AboutUs extends Component {
 	render() {
 		return (
-			<>
+			<div
+				style={{
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+				}}
+			>
 				<div className="card-container">
 					<div className="card">
 						<div className="img">
@@ -84,7 +90,7 @@ class AboutUs extends Component {
 						</div>
 					</div>
 				</div>
-			</>
+			</div>
 		);
 	}
 }

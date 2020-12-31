@@ -12,7 +12,6 @@ const sendErrorMessage = require("../helper/sendError");
 const sendResponse = require("../helper/sendResponse");
 
 const verifyPostRequest = (req, res, next) => {
-	console.log(req.body);
 	const requireProperties = [
 		"firstName",
 		"lastName",

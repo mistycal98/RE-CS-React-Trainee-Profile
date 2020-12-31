@@ -1,5 +1,9 @@
+::-webkit-scrollbar {
+	width: 0px;
+}
+
 .emp-container {
-	box-sizing: border-box;
+	box-sizing: border-box;	
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -9,6 +13,8 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
 }
 
 .emp-detials h1 {

@@ -14,13 +14,19 @@
 	border-radius: 50%;
 	margin: auto;
 }
+
+.content {
+	text-align: center;
+}
 .content h2,
 p {
 	margin-bottom: 1rem;
 }
 
 .content p {
-	height: 7.5rem;
+	height: 10rem;
+	font-size: 1.1rem;
+	word-spacing: 2px;
 }
 
 .content button {
@@ -30,7 +36,7 @@ p {
 .content button a {
 	text-align: center;
 	text-decoration: none;
-	display:inline-block;
+	display: inline-block;
 	padding: 0.46em 1.6em;
 	/* border:0.1em solid #000000; */
 	/* margin: 0 0.2em 0.2em 0; */
@@ -38,13 +44,13 @@ p {
 	box-sizing: border-box;
 	font-weight: 300;
 	color: black;
-	text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-	background-color: #5C677D;
+	text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+	background-color: #5c677d;
 	transition: all 0.15s;
 }
 
-.content button a:hover{
-	text-shadow: 0 0 2em rgba(255,255,255,1);
+.content button a:hover {
+	text-shadow: 0 0 2em rgba(255, 255, 255, 1);
 	color: #001233;
 	border-color: #001233;
 }
@@ -64,7 +70,6 @@ p {
 	background-color: white;
 }
 
-body{
-	/* background-image: url(../assets/bag1.jpeg); */
+body {
 	background-color: #001233;
 }

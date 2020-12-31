@@ -1,5 +1,6 @@
 .body {
 	height: calc(100vh - 20vh);
 	display: flex;
-	padding: 3rem;
+	padding: 2rem;
+	overflow: hidden;
 }
