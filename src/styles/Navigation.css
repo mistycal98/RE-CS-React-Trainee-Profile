@@ -1,0 +1,50 @@
+.logo {
+	margin: 1rem;
+	width: auto;
+	height: 4rem;
+}
+
+.navbar {
+    display: flex;
+    padding: 1px;
+    margin: 0;
+    width: 100%;
+	justify-content: space-between;
+	list-style: none;
+    background-color:#0B090A;
+    overflow: hidden;
+}
+
+.links {
+	display: flex;
+	justify-content: center;
+    list-style: none;
+
+}
+
+.links li {
+	margin: 1rem;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.links li a {
+	text-decoration: none;
+    color: #FFFFFF;
+    transition: background-color .5s;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
+
+}
+
+.links li a:hover{
+    background:#E5383B;
+    color: #F5F3F4;
+}
+.card {
+  border: 1px solid red;
+}

@@ -21,11 +21,11 @@ class Companies extends Component {
 	render() {
 		return (
 			<div>
-				<select>
+				{/* <select>
 					<option>Raw Engineering</option>
 					<option>Contentstack</option>
 					<option>Surfboard Ventures</option>
-				</select>
+				</select> */}
 				{this.state.employees.map((employee) => (
 					<Link to={`/employees/${employee.id}`}>
 						<div className="card">
