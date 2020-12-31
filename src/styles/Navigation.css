@@ -1,0 +1,44 @@
+.logo {
+	margin: 1rem;
+	width: auto;
+	height: 3.5rem;
+}
+
+.navbar {
+	height: 12vh;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	list-style: none;
+	background-color: #0b090a;
+	overflow: hidden;
+}
+
+.links {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+}
+
+.links li {
+	margin: 1rem;
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.links li a {
+	text-decoration: none;
+	color: #ffffff;
+	transition: background-color 0.5s;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
+}
+
+.links li a:hover {
+	background: #e5383b;
+	color: #f5f3f4;
+}
