@@ -7,7 +7,7 @@ class Home extends Component {
 		return (
 			<div className="main-body">
 				<div class="animation01">
-        <div class="rhombus_small">
+            <div class="rhombus_small">
             <div class="rhombus">
                 <div class="border_box">
                     <span class="line line01"></span>

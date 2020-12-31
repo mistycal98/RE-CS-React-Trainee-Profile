@@ -6,7 +6,12 @@
 	box-sizing: border-box;
 }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
+body {
+	/* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace; */
+
+	font-family: 'Cormorant Garamond', serif;}
+
+a{
+	text-decoration: none;
 }
