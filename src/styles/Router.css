@@ -1,3 +1,5 @@
 .body {
-	height: calc(100vh - 12vh);
+	height: calc(100vh - 20vh);
+	display: flex;
+	padding: 3rem;
 }
