@@ -19,6 +19,22 @@ app.use(express.urlencoded({ extended: true }));
 // Routes import
 app.use("/employee", employeeRoute);
 
+// Home Page
+app.get("/", (req, res) => {
+	res.json({
+		status: "Sucessfull",
+		message: "This is the Home Page",
+	});
+});
+
+// 404 Not Found Page
+app.get("*", (req, res) => {
+	res.json({
+		status: "Sucessfull",
+		message: "No Routes Found",
+	});
+});
+
 // DB Connection
 try {
 	mongoose.connect(
@@ -27,13 +43,11 @@ try {
 			useCreateIndex: true,
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
+			useFindAndModify: false,
 		},
 		() => {
-			app.listen(
-				process.env.PORT,
-				console.log(`http://localhost:${process.env.PORT}`)
-			);
 			console.log("Connected to DB!");
+			app.listen(process.env.PORT, console.log(`http://localhost:${process.env.PORT}`));
 		}
 	);
 } catch (error) {

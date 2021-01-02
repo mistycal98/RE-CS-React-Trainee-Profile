@@ -22,7 +22,7 @@ const {
 employeeRoute
 	.route("/")
 	.get(getAllEmployee)
-	.post(upload.single("employeeImage"), verifyPostRequest, createEmployee);
+	.post(upload.single("cloudinaryImage"), verifyPostRequest, createEmployee);
 
 // route : "/employee/:empid"
 employeeRoute.route("/:empId").delete(deleteEmpById).get(findEmpById).patch(updateEmployee);
