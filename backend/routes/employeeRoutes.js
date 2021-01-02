@@ -1,8 +1,12 @@
 // Package imports
 const express = require("express");
 
+// Created router Instance
+const employeeRoute = express.Router();
+
 // Module Imports
 const upload = require("../controllers/empImage");
+
 const {
 	getAllEmployee,
 	findEmpById,
@@ -12,8 +16,6 @@ const {
 	deleteEmpById,
 } = require("../controllers/empController");
 
-// Created router Instance
-const employeeRoute = express.Router();
 
 // Route definitions
 // route:"/employee/"
