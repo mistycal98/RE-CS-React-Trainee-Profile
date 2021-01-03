@@ -5,7 +5,7 @@ import "../styles/Emp.css";
 // import "../styles/Employees.css"
 // Api url import
 import { employeeUrl } from "../api/EmployeeApi";
-class Companies extends Component {
+class Employees extends Component {
 	state = {
 		employees: [],
 	};
@@ -23,35 +23,22 @@ class Companies extends Component {
 	};
 	render() {
 		return (
-<<<<<<< HEAD
 			<div className="emp-container">
 				{this.state.employees.map((employee) => (
-					<Link to={`/employees/${employee.id}`}>
-						<div className="emp-class">
+					<Link to={`/employees/${employee.employeeId}`}>
+						<div className="emp-class" key = {employee.employeeId}>
 							<div className="emp-card">
 								<div className="emp-image">
-									<img src={employee.imageUrl} alt={employee.firstName} />
+									<img src={employee.cloudinaryImage} alt={employee.firstName} />
 								</div>
 								<div className="emp-detials">
 									<h1>
 										{employee.firstName} {employee.lastName}
 									</h1>
 									<br />
-									<h3>{employee.company}</h3>
+									<h3>{employee.companyName}</h3>
 								</div>
 							</div>
-=======
-			<div>
-				{this.state.employees.map((employee) => (
-					<Link to={`/employees/${employee.employeeId}`}>
-						<div className="card">
-							<p>{employee.employeeId}</p>
-							<h1>
-								{employee.firstName} {employee.lastName}
-							</h1>
-							<img src={employee.cloudinaryImage} alt={employee.firstName} />
-							<h3>{employee.companyName}</h3>
->>>>>>> tushar.mistry
 						</div>
 					</Link>
 				))}
@@ -59,4 +46,4 @@ class Companies extends Component {
 		);
 	}
 }
-export default Companies;
+export default Employees;
