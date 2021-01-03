@@ -7,29 +7,30 @@ class Footer extends Component {
 			<div className="site-footer">
 				<div className="footer-conatiner">
 					<div className="footer-row">
-						<div className="col-md-8 col-sm-6 col-xs-12">
-							<p className="footer-text">
+						<div className="footer-content">
+							<p>
 								Copyright &copy; 2020 All Rights Reserved by<a href=" ">Company</a>.
 							</p>
-						</div>
 						<ul className="footer-icons">
 							<li>
-								<a className="facebook" href=" ">
+								<a href=" ">
 									<i className="fa fa-facebook"></i>
 								</a>
 							</li>
 							<li>
-								<a className="twitter" href=" ">
+								<a href=" ">
 									<i className="fa fa-twitter"></i>
 								</a>
 							</li>
 							<li>
-								<a className="linkedin" href=" ">
+								<a href=" ">
 									<i className="fa fa-linkedin"></i>
 								</a>
 							</li>
 						</ul>
-					</div>
+						</div>
+												</div>
+
 				</div>
 			</div>
 		);
