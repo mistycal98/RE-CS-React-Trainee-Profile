@@ -119,7 +119,7 @@ const employeeSchema = new mongoose.Schema({
 				validator: function () {
 					return this.profileUrl.trim().length;
 				},
-				message: "Profilr url should not be empty",
+				message: "Profile url should not be empty",
 			},
 			{
 				validator: function () {
