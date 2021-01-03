@@ -13,21 +13,12 @@ const sendResponse = require("../helper/sendResponse");
 
 const verifyPostRequest = (req, res, next) => {
 	console.log(req.body);
-	const requireProperties = [
-		"firstName",
-		"lastName",
-		"companyName",
-		"emailId",
-	];
+	const requireProperties = ["firstName", "lastName", "companyName", "emailId"];
 	let result = requireProperties.every((key) => {
 		return req.body[key];
 	});
 	if (!result) {
-		sendErrorMessage(
-			new AppError(400, "unsuccessful", "request body is inavlid"),
-			req,
-			res
-		);
+		sendErrorMessage(new AppError(400, "unsuccessful", "request body is inavlid"), req, res);
 	} else {
 		next();
 	}
@@ -77,11 +68,7 @@ const findEmpById = async (req, res, next) => {
 		sendResponse(201, "Successful", employee, req, res);
 	} catch (err) {
 		console.log(err);
-		sendErrorMessage(
-			new AppError(400, "Unsuccessful", "Id not found"),
-			req,
-			res
-		);
+		sendErrorMessage(new AppError(400, "Unsuccessful", "Id not found"), req, res);
 	}
 };
 
@@ -96,11 +83,7 @@ const updateEmployee = async (req, res, next) => {
 		sendResponse(201, "Successful", employee, req, res);
 	} catch (err) {
 		console.log(err);
-		sendErrorMessage(
-			new AppError(400, "Unsuccessful", "Cannot update"),
-			req,
-			res
-		);
+		sendErrorMessage(new AppError(400, "Unsuccessful", "Cannot update"), req, res);
 	}
 };
 
@@ -121,11 +104,7 @@ const deleteEmpById = async (req, res, next) => {
 	} catch (err) {
 		console.log(err);
 		sendErrorMessage(
-			new AppError(
-				400,
-				"Unsuccessful request",
-				"Employee can not be deleted"
-			),
+			new AppError(400, "Unsuccessful request", "Employee can not be deleted"),
 			req,
 			res
 		);

@@ -11,9 +11,11 @@ class Companies extends Component {
 
 	componentDidMount = async () => {
 		try {
-			let result = await fetch(`${employeeUrl}/employees`);
+			let result = await fetch(`${employeeUrl}/employee`);
 			let employee = await result.json();
-			this.setState({ employees: [...employee] });
+			// console.log(employee.data);
+			this.setState({ employees: [...employee.data] });
+			console.log(this.state.employees);
 		} catch (error) {
 			console.warn(error);
 		}
@@ -21,20 +23,15 @@ class Companies extends Component {
 	render() {
 		return (
 			<div>
-				<select>
-					<option>Raw Engineering</option>
-					<option>Contentstack</option>
-					<option>Surfboard Ventures</option>
-				</select>
 				{this.state.employees.map((employee) => (
-					<Link to={`/employees/${employee.id}`}>
+					<Link to={`/employees/${employee.employeeId}`}>
 						<div className="card">
-							<p>{employee.id}</p>
+							<p>{employee.employeeId}</p>
 							<h1>
 								{employee.firstName} {employee.lastName}
 							</h1>
-							<img src={employee.imageUrl} alt={employee.firstName} />
-							<h3>{employee.company}</h3>
+							<img src={employee.cloudinaryImage} alt={employee.firstName} />
+							<h3>{employee.companyName}</h3>
 						</div>
 					</Link>
 				))}
