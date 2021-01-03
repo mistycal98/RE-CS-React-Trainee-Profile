@@ -1,6 +1,5 @@
 // package imports
 const mongoose = require("mongoose");
-// const emailExistHandler = require("../helper/emailExist.js");
 
 // Defining Schema
 const employeeSchema = new mongoose.Schema({

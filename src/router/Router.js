@@ -7,8 +7,6 @@ import Home from "../pages/Home";
 import AboutUs from "../pages/AboutUs";
 import Navigation from "../components/Navigation";
 import Employees from "../pages/Employees";
-import Employee from "../pages/employeeDetail";
-import Login from "../pages/Login";
 import Footer from "../components/Footer";
 
 class Router extends Component {
@@ -21,8 +19,6 @@ class Router extends Component {
 						<Route path="/" exact component={Home} />
 						<Route path="/aboutus" exact component={AboutUs} />
 						<Route path="/employees" exact component={Employees} />
-						<Route path="/employees/:id" exact component={Employee} />
-						<Route path="/login" exact component={Login} />
 					</Switch>
 				</main>
 				<Footer />
