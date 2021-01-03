@@ -7,11 +7,12 @@ export default class Employee extends Component {
 	};
 	componentDidMount = async () => {
 		try {
-			let result = await fetch(`${employeeUrl}/employee/${this.props.match.params.id}`);
+			let result = await fetch(
+				`${employeeUrl}/employee/${this.props.match.params.id}`
+			);
 			let response = await result.json();
 			console.log(response.data);
 			this.setState({ employee: [response.data] });
-			// console.log(this.state.employee);
 		} catch (error) {
 			console.log(error);
 		}
@@ -22,9 +23,15 @@ export default class Employee extends Component {
 				{this.state.employee.map((emp) => (
 					<div key={emp.employeeId}>
 						<p>{emp.employeeId}</p>
-						<img src={emp.cloudinaryImage} alt={emp.firstName} />
+						<img
+							src={emp.cloudinaryImage}
+							alt={emp.firstName}
+							style={{ width: "20vh" }}
+						/>
 						<p>{emp.companyName}</p>
-						<button><a href={emp.profile_url}>Learn More</a></button>
+						<button>
+							<a href={emp.profileUrl}>Learn More</a>
+						</button>
 					</div>
 				))}
 			</div>

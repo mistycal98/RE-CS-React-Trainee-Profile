@@ -23,11 +23,7 @@ class AboutUs extends Component {
 							<p>
 								Raw Engineering is an Innovative Digital Solutions
 								company providing Digital Transformation Strategy and
-								Custom Development Services. We partner with the world’s
-								best Fortune 500 Enterprises and Startups to deliver
-								Headless CMS Strategy & Implementation, Mobile Apps,
-								Websites, SaaS Products, Cloud Strategy, DevOps and SRE
-								Solutions.
+								Custom Development Services.
 							</p>
 							<button className="about-button">
 								<a
@@ -51,11 +47,9 @@ class AboutUs extends Component {
 							<p>
 								Contentstack is the leading API-first content hub at the
 								intersection of CMS and DXP powering modernized digital
-								experiences. It recently received a Series-A funding of
-								$31.5 million to deliver personalized, omnichannel
-								digital experiences.
+								experiences. 
 							</p>
-							<button>
+							<button className="about-button">
 								<a
 									href="https://www.contentstack.com/"
 									className="button-link"
@@ -79,7 +73,7 @@ class AboutUs extends Component {
 								online sessions for students and classroom activities to
 								innovation-driven development competitions.
 							</p>
-							<button>
+							<button className="about-button">
 								<a
 									href="https://www.surfboardventures.com/"
 									className="button-link"

@@ -1,10 +1,11 @@
 // Package import
 import { Component } from "react";
-import { Link } from "react-router-dom";
 import "../styles/Emp.css";
-// import "../styles/Employees.css"
+// import "../styles/Employees.css";
+
 // Api url import
 import { employeeUrl } from "../api/EmployeeApi";
+
 class Employees extends Component {
 	state = {
 		employees: [],
@@ -25,22 +26,27 @@ class Employees extends Component {
 		return (
 			<div className="emp-container">
 				{this.state.employees.map((employee) => (
-					<Link to={`/employees/${employee.employeeId}`}>
-						<div className="emp-class" key = {employee.employeeId}>
-							<div className="emp-card">
-								<div className="emp-image">
-									<img src={employee.cloudinaryImage} alt={employee.firstName} />
-								</div>
-								<div className="emp-detials">
-									<h1>
-										{employee.firstName} {employee.lastName}
-									</h1>
-									<br />
-									<h3>{employee.companyName}</h3>
-								</div>
-							</div>
+					//<Link to={`/employees/${employee.employeeId}`}>
+					<div className="emp-card" key={employee.employeeId}>
+						<div className="emp-image">
+							<img
+								src={employee.cloudinaryImage}
+								alt={employee.firstName}
+							/>
 						</div>
-					</Link>
+						<div className="emp-detials">
+							<h1>
+								{employee.firstName} {employee.lastName}
+							</h1>
+							<h3>{employee.companyName}</h3>
+						</div>
+						<div className="emp-profile-link">
+							<button>
+								<a href={employee.profileUrl}>Learn More</a>
+							</button>
+						</div>
+					</div>
+					//</Link>
 				))}
 			</div>
 		);

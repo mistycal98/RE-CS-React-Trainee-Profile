@@ -3,14 +3,9 @@
 }
 
 .emp-container {
-	box-sizing: border-box;	
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
-	min-height: 100vh;
-	margin: 0;
-	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	overflow-y: scroll;
@@ -27,19 +22,16 @@
 	text-transform: uppercase;
 }
 .emp-card {
-	border: 1px solid #b3b8cd;
 	border-radius: 5px;
-	box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 10px 0px rgba(92, 103, 125, 1);
 	color: #b3b8cd;
-	margin: 1rem;
-	position: relative;
-	width: 350px;
-	max-width: 100%;
+	margin: 1rem 3rem;
+	width: 250px;
+	height: 280px;
 	text-align: center;
 }
 
 .emp-image {
-	border: 1px solid #03bfcb;
 	border-radius: 10px;
 	margin: 1rem auto;
 	overflow: hidden;
@@ -51,4 +43,25 @@
 .emp-image img {
 	height: 100%;
 	width: 100%;
+}
+
+.emp-profile-link {
+	margin-top: 1.2rem;
+}
+
+.emp-profile-link button {
+	padding: 0.7rem;
+	border-radius: 5px;
+	background-color: black;
+	box-shadow: 0px 0px 10px 0px rgba(92, 103, 125, 1);
+	border: none;
+}
+
+.emp-profile-link button a {
+	font-size: 0.7rem;
+	letter-spacing: 1px;
+	color: #b3b8cd;
+	font-weight: 600;
+	border: none;
+	text-transform: uppercase;
 }

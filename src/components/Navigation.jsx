@@ -2,7 +2,7 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navigation.css";
 
-import logo from "../assets/logo512.png";
+import logo from "../assets/employee-card.png";
 class Navigation extends Component {
 	render() {
 		return (
