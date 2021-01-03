@@ -74,60 +74,52 @@ const createEmployee = async (req, res, next) => {
 
 // GET a specific employee by id in request params
 const findEmpById = async (req, res, next) => {
-  try {
-    let employee = await Employee.findOne({ employeeId: req.params.empId });
-    sendResponse(201, "Successful", employee, req, res);
-  } catch (err) {
-    console.log(err);
-    sendErrorMessage(
-      new AppError(400, "Unsuccessful", "Id not found"),
-      req,
-      res
-    );
-  }
+	try {
+		let employee = await Employee.findOne({ employeeId: req.params.empId });
+		sendResponse(201, "Successful", employee, req, res);
+	} catch (err) {
+		console.log(err);
+		sendErrorMessage(new AppError(400, "Unsuccessful", "Id not found"), req, res);
+	}
 };
 
 // PATCH update employee by id
 const updateEmployee = async (req, res, next) => {
-  try {
-    let employee = await Employee.findOneAndUpdate(
-      { employeeId: req.params.empId },
-      { companyName: req.body.companyName },
-      { new: true, useFindAndModify: false }
-    );
-    sendResponse(201, "Successful", employee, req, res);
-  } catch (err) {
-    console.log(err);
-    sendErrorMessage(
-      new AppError(400, "Unsuccessful", "Cannot update"),
-      req,
-      res
-    );
-  }
+	try {
+		let employee = await Employee.findOneAndUpdate(
+			{ employeeId: req.params.empId },
+			{ companyName: req.body.companyName },
+			{ new: true, useFindAndModify: false }
+		);
+		sendResponse(201, "Successful", employee, req, res);
+	} catch (err) {
+		console.log(err);
+		sendErrorMessage(new AppError(400, "Unsuccessful", "Cannot update"), req, res);
+	}
 };
 
 // DELETE employee by a specfic id
 const deleteEmpById = async (req, res, next) => {
-  try {
-    let employee = await Employee.findOne({ employeeId: req.params.empId });
+	try {
+		let employee = await Employee.findOne({ employeeId: req.params.empId });
 
-    cloudinary.config(cloudinaryObj);
+		cloudinary.config(cloudinaryObj);
 
-    await cloudinary.uploader.destroy(employee.cloudinaryId);
+		await cloudinary.uploader.destroy(employee.cloudinaryId);
 
-    await Employee.deleteOne({
-      employeeId: employee.employeeId,
-    });
+		await Employee.deleteOne({
+			employeeId: employee.employeeId,
+		});
 
-    sendResponse(201, "Successfull", "Employee deleted", req, res);
-  } catch (err) {
-    console.log(err);
-    sendErrorMessage(
-      new AppError(400, "Unsuccessful request", "Employee can not be deleted"),
-      req,
-      res
-    );
-  }
+		sendResponse(201, "Successfull", "Employee deleted", req, res);
+	} catch (err) {
+		console.log(err);
+		sendErrorMessage(
+			new AppError(400, "Unsuccessful request", "Employee can not be deleted"),
+			req,
+			res
+		);
+	}
 };
 
 // Module Named Exports
