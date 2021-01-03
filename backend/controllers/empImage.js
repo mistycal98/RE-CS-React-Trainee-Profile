@@ -21,6 +21,19 @@ const storage = multer.diskStorage({
 			`${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`
 		);
 	},
+
+	// fileFilter: (req, file, cb) => {
+	// 	let ext = path.extname(file.originalname);
+	// 	if (ext !== ".jpg" && ext !== ".jpeg" && ext !== ".png") {
+	// 		cb(new Error("File not supported"), false);
+	// 		return;
+	// 	}
+	// 	cb(null, true);
+	// },
+});
+
+const upload = multer({
+	storage,
 	fileFilter: (req, file, cb) => {
 		let ext = path.extname(file.originalname);
 		if (ext !== ".jpg" && ext !== ".jpeg" && ext !== ".png") {
@@ -30,7 +43,5 @@ const storage = multer.diskStorage({
 		cb(null, true);
 	},
 });
-
-const upload = multer({ storage: storage });
 
 module.exports = upload;

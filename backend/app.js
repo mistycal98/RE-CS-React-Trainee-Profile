@@ -2,6 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const cors = require("cors");
 
 // Module Imports
 const employeeRoute = require("./routes/employeeRoutes");
@@ -14,6 +15,7 @@ const app = express();
 
 // Express Middlewares
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes import
