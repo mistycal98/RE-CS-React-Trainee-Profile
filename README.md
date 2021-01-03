@@ -1,10 +1,10 @@
 # RE-CS-React-Trainee-Profile ⚛️
 
-This is a React Repository 👨‍💻 
+This is a React Repository 👨‍💻
+
+<br>
 
 ## For npm Users 🗒️
-
-Toh nikalo na tumlog 3
 
 Download Dependencies
 
@@ -17,6 +17,8 @@ Run the app in the development mode
 ```
 $ npm run start
 ```
+
+<br>
 
 ## For Yarn Users 🧶
 
@@ -32,7 +34,9 @@ Run the app in the development mode
 $ yarn start
 ```
 
-The Project would start on your localhost
+The Project would start on your localhost on specified port
+
+<br>
 
 # Folder Structure 📁
 
@@ -124,20 +128,17 @@ The Project would start on your localhost
 
 <br>
 
-# Collaborators 
+# Collaborators
 
 This project exists thanks to all the people who contributed ❤️
 
 - [Kritika Poojari](https://github.com/kritikapoojari) (lead)
-<br>
 
-- [Venu Sirpuram](https://github.com/venu-RAW) 
-<br>
-
-- [Swati Pandey](https://github.com/SwaatiPandey) 
-<br>
+- [Swati Pandey](https://github.com/SwaatiPandey)
 
 - [Neeta Jaiswal](https://github.com/Neeta26)
-<br>
+
+- [Venu Sirpuram](https://github.com/venu-RAW)
 
 - [Tushar Mistry](https://github.com/mistycal98)
+
